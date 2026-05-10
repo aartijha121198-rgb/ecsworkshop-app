@@ -31,7 +31,7 @@ jobs:
           ls -l backend/Dockerfile || echo "Error: Backend Dockerfile not found"
           if [ ! -f frontend/Dockerfile ] || [ ! -f backend/Dockerfile ]; then exit 1; fi
 
-      # Configure AWS credentials for ECR and ECS access
+      # Configure AWS credentials for ECR and ECS acces
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:

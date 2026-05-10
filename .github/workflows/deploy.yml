@@ -11,11 +11,19 @@ jobs:
   deploy-app:
     # Runner: Ubuntu for Docker compatibility
     runs-on: ubuntu-latest 
+    defaults:
+      run:
+        working-directory: ./
+
+
+
     steps:
       # Checkout code from repository
       - name: Checkout code
         uses: actions/checkout@v3
 
+
+      
       # Verify Dockerfiles exist
       - name: Check app directories
         run: |
